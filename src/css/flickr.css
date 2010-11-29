@@ -118,3 +118,20 @@
 }
 
 
+.ui-startup
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-indent: -9999px;
+  
+  background: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0.5, rgb(122,144,255)),
+        color-stop(1, rgb(91,108,191))
+    )
+}
