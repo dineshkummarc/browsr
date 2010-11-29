@@ -22,13 +22,13 @@ describe("evri.convertFlickrUserJson", function() {
           "_content": "Seattle, WA, USA"
         },
         "photosurl": {
-          "_content": "http:\/\/www.flickr.com\/photos\/jeffwatkins\/"
+          "_content": "http:\/\/www.browsr.com\/photos\/jeffwatkins\/"
         },
         "profileurl": {
-          "_content": "http:\/\/www.flickr.com\/people\/jeffwatkins\/"
+          "_content": "http:\/\/www.browsr.com\/people\/jeffwatkins\/"
         },
         "mobileurl": {
-          "_content": "http:\/\/m.flickr.com\/photostream.gne?id=790583"
+          "_content": "http:\/\/m.browsr.com\/photostream.gne?id=790583"
         },
         "photos": {
           "firstdatetaken": {
@@ -48,7 +48,7 @@ describe("evri.convertFlickrUserJson", function() {
   });
   
   it("should include id", function() {
-    var json= flickr.convertFlickrUserJson(this.USER);
+    var json= browsr.convertFlickrUserJson(this.USER);
     expect(json).toHaveProperty('id');
   });
   

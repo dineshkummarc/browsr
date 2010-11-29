@@ -1,6 +1,6 @@
 /*jsl:import coherent*/
 
-flickr.Photo= Model("Photo", {
+browsr.Photo= Model("Photo", {
 
   keyDependencies: {
     tinyImageUrl: ['id', 'secret', 'server', 'farm'],
@@ -21,60 +21,60 @@ flickr.Photo= Model("Photo", {
   tinyImageUrl: function()
   {
     return this.__tinyImageUrl ||
-           (this.__tinyImageUrl=this.urlOfImageWithSize(flickr.Photo.SizeTiny));
+           (this.__tinyImageUrl=this.urlOfImageWithSize(browsr.Photo.SizeTiny));
   },
   
   thumbnailImageUrl: function()
   {
     return this.__thumbnailImageUrl ||
-           (this.__thumbnailImageUrl=this.urlOfImageWithSize(flickr.Photo.SizeThumbnail));
+           (this.__thumbnailImageUrl=this.urlOfImageWithSize(browsr.Photo.SizeThumbnail));
   },
 
   smallImageUrl: function()
   {
     return this.__smallImageUrl ||
-           (this.__smallImageUrl=this.urlOfImageWithSize(flickr.Photo.SizeSmall));
+           (this.__smallImageUrl=this.urlOfImageWithSize(browsr.Photo.SizeSmall));
   },
 
   mediumImageUrl: function()
   {
     return this.__mediumImageUrl ||
-           (this.__mediumImageUrl=this.urlOfImageWithSize(flickr.Photo.SizeMedium));
+           (this.__mediumImageUrl=this.urlOfImageWithSize(browsr.Photo.SizeMedium));
   },
 
   largeImageUrl: function()
   {
     return this.__largeImageUrl ||
-           (this.__largeImageUrl=this.urlOfImageWithSize(flickr.Photo.SizeLarge));
+           (this.__largeImageUrl=this.urlOfImageWithSize(browsr.Photo.SizeLarge));
   },
 
   veryLargeImageUrl: function()
   {
     return this.__veryLargeImageUrl ||
-           (this.__veryLargeImageUrl=this.urlOfImageWithSize(flickr.Photo.SizeVeryLarge));
+           (this.__veryLargeImageUrl=this.urlOfImageWithSize(browsr.Photo.SizeVeryLarge));
   },
   
   /**
-    flickr.Photo#urlOfImageWithSize(size) -> String
+    browsr.Photo#urlOfImageWithSize(size) -> String
     
     * size(flick.Photo.Size): The constant identifying the size of the image
     
     This method creates a URL for the image with the specified size according to
     the general photo URL rule:
     
-    http://farm{farm-id}.static.flickr.com/{server-id}/{id}_{secret}[_{size}].jpg
+    http://farm{farm-id}.static.browsr.com/{server-id}/{id}_{secret}[_{size}].jpg
    */
   urlOfImageWithSize: function(size)
   {
     return ['http://farm', this.farm(), '.static.flickr.com/', this.server(),
             '/', this.id(), '_', this.secret(),
-            (size!==flickr.Photo.SizeMedium ? '_'+size : ''),
+            (size!==browsr.Photo.SizeMedium ? '_'+size : ''),
             '.jpg'].join('');
   }
   
 });
 
-Object.extend(flickr.Photo, {
+Object.extend(browsr.Photo, {
 
   SizeTiny: 's',
   SizeThumbnail: 't',

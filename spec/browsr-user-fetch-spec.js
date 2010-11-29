@@ -7,14 +7,14 @@ describe("User model", function() {
     }
     
     runs(function(){
-      var d= flickr.User.findByEmail('jeff@metrocat.org');
+      var d= browsr.User.findByEmail('jeff@metrocat.org');
       d.addCallback(oncompleteFindByEmail, this);
     });
     
     waits(2000);
     
     runs(function(){
-      expect(this.user).toBeInstanceOf(flickr.User);
+      expect(this.user).toBeInstanceOf(browsr.User);
       expect(this.user.username()).toBe("jeffwatkins");
       expect(this.user.id()).toBe("51164044@N00");
     });

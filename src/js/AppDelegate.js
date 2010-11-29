@@ -2,7 +2,7 @@
 
 
 /**
-  class flickr.AppDelegate
+  class browsr.AppDelegate
   
   For simple applications, the AppDelegate may be all you need to configure and
   manage your application. As the last item in the responder chain, any un-handled
@@ -11,10 +11,10 @@
   In addition, your AppDelegate may handle messages from the shared Application
   object including `applicationDidFinishLaunching` and `hash
 */
-flickr.AppDelegate= Class.create(coherent.Controller, {
+browsr.AppDelegate= Class.create(coherent.Controller, {
 
   /**
-    flickr.AppDelegate#applicationDidFinishLaunching(app)
+    browsr.AppDelegate#applicationDidFinishLaunching(app)
   
     - app (coherent.Application): The shared application that has finished launching
     
@@ -27,7 +27,7 @@ flickr.AppDelegate= Class.create(coherent.Controller, {
   },
   
   /**
-    flickr.AppDelegate#hashDidChange(hashValue)
+    browsr.AppDelegate#hashDidChange(hashValue)
     
     - hashValue (String): The new value of the hash on the URL
     
@@ -40,11 +40,11 @@ flickr.AppDelegate= Class.create(coherent.Controller, {
   },
   
   /**
-    flickr.AppDelegate#findUserByEmail(sender)
+    browsr.AppDelegate#findUserByEmail(sender)
     
     - sender(coherent.TextField): The text field that generated this action
     
-    This method will call the flickr.User.findByEmail method to load the user
+    This method will call the browsr.User.findByEmail method to load the user
     with the given email address.
    */
   findUserByEmail: function(sender)
@@ -54,15 +54,15 @@ flickr.AppDelegate= Class.create(coherent.Controller, {
       return;
     this.__email= email;
     
-    var d= flickr.User.findByEmail(email);
+    var d= browsr.User.findByEmail(email);
     d.addCallback(this.oncompleteFindUserByEmail, this);
     d.addErrorHandler(this.onfailedFindUserByEmail, this);
   },
 
   /**
-    flickr.AppDelegate#oncompleteFindUserByEmail(user)
+    browsr.AppDelegate#oncompleteFindUserByEmail(user)
     
-    - user(flickr.User): The user with the specified email address
+    - user(browsr.User): The user with the specified email address
     
     After loading the user associated with the specified email address, this
     method stores the user in the user property (duh) and hides the user picker
@@ -75,7 +75,7 @@ flickr.AppDelegate= Class.create(coherent.Controller, {
   },
   
   /**
-    flickr.AppDelegate#onfailedFindUserByEmail(error)
+    browsr.AppDelegate#onfailedFindUserByEmail(error)
     
     - error(Error): The error object that should explain what went wrong.
     

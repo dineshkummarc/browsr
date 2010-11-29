@@ -26,7 +26,7 @@ NIB('Main', {
 
 
   //  Instantiate your AppDelegate and configure it.
-  AppDelegate: flickr.AppDelegate({
+  AppDelegate: browsr.AppDelegate({
     //  Place configuration options for your application delegate here
     userPicker: REF('Main #user-picker')
   }),

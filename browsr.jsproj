@@ -1,8 +1,8 @@
-name: flickr
+name: browsr
 version: 1.0.0
 notice: src/NOTICE
 type: application
-export: flickr
+export: browsr
 output folder: build
 
 external:
@@ -17,9 +17,9 @@ source:
   - src/index.html
 
   - src/css/reset.css
-  - src/css/flickr.css
+  - src/css/browsr.css
 
   - src/nibs
 
-  - src/js/flickr.js
+  - src/js/browsr.js
   - src/js

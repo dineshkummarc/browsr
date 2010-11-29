@@ -1,12 +1,12 @@
 /*jsl:import coherent*/
 
-flickr.API_KEY= '9fea5ae0c33065f2d421b258da9546ca';
-flickr.API_URL= 'http://api.flickr.com/services/rest';
-flickr.XHR_OPTIONS= {
+browsr.API_KEY= '9fea5ae0c33065f2d421b258da9546ca';
+browsr.API_URL= 'http://api.flickr.com/services/rest';
+browsr.XHR_OPTIONS= {
   jsonp: "jsoncallback"
 };
 
-flickr.convertFlickrUserJson= function(userJson)
+browsr.convertFlickrUserJson= function(userJson)
 {
   return {
     id: userJson.id,
