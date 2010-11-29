@@ -1,0 +1,80 @@
+/** CSS Rules specific to the main application interface bundle **/
+#user-picker
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  background-color: rgb(122,144,255);
+  background: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0.5, rgb(122,144,255)),
+        color-stop(1, rgb(91,108,191))
+    )
+}
+
+#user-picker.ui-hidden
+{
+  opacity: 0;
+}
+
+#user-picker h1
+{
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  width: 300px;
+  margin-left: -150px;
+  line-height: 40px;
+  margin-top: -20px;
+  
+  color: rgba(255,255,255,0.85);
+  font-size: 64px;
+  font-weight: bold;
+  font-family: "helvetica neue", helvetica, arial;
+  -webkit-transition: left 1s ease-in-out 1s;
+}
+
+.ui-loading #user-picker h1
+{
+  left: 50%;
+}
+
+#user-picker h1 em
+{
+  font-weight: bold;
+  color: rgba(255,255,255,0.95);
+}
+
+#user-picker input
+{
+  font-size: 40px;
+  font-family: "helvetica neue", helvetica, arial;
+  padding: 10px;
+  position: absolute;
+  line-height: 40px;
+  top: 50%;
+  left: 50%;
+  margin-top: -30px;
+  width: 50%;
+  border-radius: 20px 0 0 20px;
+  border: 10px solid rgb(61,72,128);
+  border-right-width: 0px;
+  background-color: white;
+  outline: none;
+  -webkit-transition: left 1s ease-in-out 1s;
+}
+
+.ui-loading #user-picker input
+{
+  left: 100%;
+}
+
+#user-picker .ui-placeholder
+{
+  color: #ccc;
+}
